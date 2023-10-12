@@ -1,5 +1,12 @@
-package org.example;public class Main {
+package org.example;
+
+public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        University u = new University();
+        Student s = new Student( u );
+
+        System.out.println(u);
+        System.out.println(s);
     }
 }
