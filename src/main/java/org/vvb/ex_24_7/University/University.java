@@ -1,6 +1,9 @@
-package org.example;
+package org.vvb.ex_24_7.University;
 
-import static org.example.StudyProfile.INGENER;
+import org.apache.poi.ss.usermodel.Row;
+import org.vvb.ex_24_7.Student.StudyProfile;
+
+import static org.vvb.ex_24_7.Student.StudyProfile.*;
 
 public class University {
     String id;
@@ -9,12 +12,19 @@ public class University {
     int yearOfFoundation;
     StudyProfile mainProfile;
 
-    University(){
+    private University(){
         this.id = "UNIVER";
         this.fullName = "BIG UNIVER";
         this.shortName = "BU";
         this.yearOfFoundation = 1099;
-        this.mainProfile = INGENER;
+        this.mainProfile = PHYSICS;
+    }
+    public University( Row row ){
+        this.id = row.getCell(0).getStringCellValue();
+        this.fullName = row.getCell(1).getStringCellValue();
+        this.shortName = row.getCell(2).getStringCellValue();
+        this.yearOfFoundation = (int)row.getCell(3).getNumericCellValue();
+        this.mainProfile = StudyProfile.valueOf(row.getCell(4).getStringCellValue());
     }
 
     @Override
