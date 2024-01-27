@@ -1,10 +1,8 @@
-package org.vvb.ex_24_7.Student;
+package org.vvb.ex_24_7.Model.Students;
 
 import org.apache.poi.ss.usermodel.Row;
-import org.vvb.ex_24_7.University.University;
-import org.vvb.ex_24_7.University.UniversityList;
-
-import java.util.List;
+import org.vvb.ex_24_7.Model.Universities.University;
+import org.vvb.ex_24_7.Model.Universities.UniversityList;
 
 public class Student {
 

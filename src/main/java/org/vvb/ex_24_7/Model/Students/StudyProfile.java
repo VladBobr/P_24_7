@@ -1,6 +1,4 @@
-package org.vvb.ex_24_7.Student;
-
-import java.io.FileInputStream;
+package org.vvb.ex_24_7.Model.Students;
 
 public enum StudyProfile {
     PHYSICS("Физика"),

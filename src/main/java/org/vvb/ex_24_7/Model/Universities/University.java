@@ -1,9 +1,9 @@
-package org.vvb.ex_24_7.University;
+package org.vvb.ex_24_7.Model.Universities;
 
 import org.apache.poi.ss.usermodel.Row;
-import org.vvb.ex_24_7.Student.StudyProfile;
+import org.vvb.ex_24_7.Model.Students.StudyProfile;
 
-import static org.vvb.ex_24_7.Student.StudyProfile.*;
+import static org.vvb.ex_24_7.Model.Students.StudyProfile.*;
 
 public class University {
     String id;

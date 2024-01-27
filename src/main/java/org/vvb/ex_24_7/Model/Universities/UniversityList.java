@@ -1,7 +1,6 @@
-package org.vvb.ex_24_7.University;
+package org.vvb.ex_24_7.Model.Universities;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Objects;
 
 public class UniversityList extends ArrayList<University> {

@@ -1,16 +1,19 @@
 package org.vvb.ex_24_7;
 
 import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.vvb.ex_24_7.Student.Student;
-import org.vvb.ex_24_7.University.University;
+import org.vvb.ex_24_7.Model.Students.Student;
+import org.vvb.ex_24_7.Model.Students.StudentsComparators;
+import org.vvb.ex_24_7.Model.Universities.UniversitiesComparators;
+import org.vvb.ex_24_7.Model.Universities.University;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.vvb.ex_24_7.University.UniversityList;
+import org.vvb.ex_24_7.Model.Universities.UniversityList;
+
+import static org.vvb.ex_24_7.Model.Students.StudentsComparators.*;
 
 public class Main {
     private static final Logger log = LogManager.getLogger(Main.class.getName());
@@ -43,10 +46,15 @@ public class Main {
                 ));
             }
 
-            System.out.println(universityList);
+            universityList.stream()
+                    .sorted(UniversitiesComparators.BY_NAME.getComparator())
+                    .forEach(System.out::println);
+
             System.out.println();
-            System.out.println();
-            System.out.println(studentList);
+
+            studentList.stream()
+                    .sorted(StudentsComparators.BY_EXAM.getComparator())
+                    .forEach(System.out::println);
 
         }catch(Exception e){
             System.out.println(e);
